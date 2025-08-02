@@ -43,7 +43,7 @@ export const ProjectView = ({ projectId }: Props) => {
             />
           </Suspense>
         </ResizablePanel>
-        <ResizableHandle withHandle />
+        <ResizableHandle className="hover:bg-primary transition-colors" />
         <ResizablePanel defaultSize={65} minSize={50}>
           <Tabs
             className="h-full gap-y-0"
@@ -61,14 +61,14 @@ export const ProjectView = ({ projectId }: Props) => {
                   <CodeIcon />
                   <span>Code</span>
                 </TabsTrigger>
-                <div className="ml-auto flex items-center gap-x-2">
-                  <Button asChild size="sm" variant="default">
-                    <Link href="/pricing">
-                      <CrownIcon /> Upgrade
-                    </Link>
-                  </Button>
-                </div>
               </TabsList>
+              <div className="ml-auto flex items-center gap-x-2">
+                <Button asChild size="sm" variant="default">
+                  <Link href="/pricing">
+                    <CrownIcon /> Upgrade
+                  </Link>
+                </Button>
+              </div>
             </div>
             <TabsContent value="preview">
               {activeFragment && <FragmentWeb data={activeFragment} />}

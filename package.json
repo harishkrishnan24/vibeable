@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "inngest:start": "npx inngest-cli@latest dev"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
