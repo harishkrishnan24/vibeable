@@ -20,7 +20,7 @@ model Project {
   userId    String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
- 
+
   messages Message[]
 }
 
@@ -55,4 +55,10 @@ model Fragment {
   files      Json
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
+}
+
+model Usage {
+  key    String    @id
+  points Int
+  expire DateTime?
 }
